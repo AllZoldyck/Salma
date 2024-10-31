@@ -93,6 +93,10 @@
             });
         }
 
+         window.addEventListener('click', () => {
+            document.getElementById("song").play();
+        });
+        
         async function singSong() {
             const lyricsContainer = document.getElementById('lyricsContainer');
             for (let i = 0; i < lyrics.length; i++) {
@@ -106,7 +110,7 @@
 
         singSong();
     </script>
-    <audio autoplay>
+    <audio id="song">
         <source src="Payung Teduh.mp3" type="audio/mp3"/>
     </audio>
 </body>
